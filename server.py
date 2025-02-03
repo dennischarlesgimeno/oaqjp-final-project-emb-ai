@@ -1,9 +1,10 @@
 from flask import Flask, request
 from EmotionDetection.emotion_detection import emotion_detector
 
-app = Flask("Emotion Detection")
+app = Flask("__name__")
 app.run(debug=True, port=5000)
 
+#to define route for emotionDetector
 @app.route('/emotionDetector')
 def emotionDetector():
     user_input = request.args.get('userinput')
